@@ -14,12 +14,11 @@ def getInfo(wanted_table,wanted_str,check_str,wanted_subscript_value,choice):
     # wanted_str=input("用于精确确定的总字段名称flight_ID")
     #     #待查询的字段名称
     # check_str=input("待查询的字段名称:客户自己输入的flight_ID")
-
     sql_select_flight = "select * from  %s where %s='%s'" %(wanted_table,wanted_str,check_str)
     if (choice == 'all airplane'):
         sql_select_flight = "select * from  airplane "
     if(choice=='order des airplane'):
-        sql_select_flight="select * from airplane order by flight_ID desc"
+        sql_select_flight="select * from airplane order by leftover desc"
 
 
     cursor1.execute(sql_select_flight)
@@ -33,7 +32,7 @@ def getInfo(wanted_table,wanted_str,check_str,wanted_subscript_value,choice):
             leftover = row[1]
             flight_ID = row[2]
             seat=row[3]
-            if(choice=="show"or choice=='order des airplane'):
+            if(choice=="show"or choice=='order des airplane' or choice=='all airplane'):
                 print(row)
 
     except Exception as e:

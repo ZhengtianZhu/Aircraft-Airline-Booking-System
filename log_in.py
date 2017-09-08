@@ -45,11 +45,11 @@ def log_in():
     db=pymysql.connect("localhost","root","","new_schema")
     cursor=db.cursor()
 
-    # name=input("input user_enter_name")
-    # password=input("input password")
+    name=input("input user_enter_name")
+    password=input("input password")
 
-    name='Zheng'
-    password='z1'
+    # name='Zheng'
+    # password='z1'
     sql_select="select * from user_info where user_name='%s'"%name
     cursor.execute(sql_select)
     rs=cursor.fetchall()

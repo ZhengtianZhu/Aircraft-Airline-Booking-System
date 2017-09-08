@@ -13,8 +13,8 @@ def cancel_ticket(user_name):
 
         # 2、取消订票
         print("cancel ticket? please input 1 or 0")
-        # cancel_ticket=input()
-        cancel_ticket = 1
+        cancel_ticket=input()
+        # cancel_ticket = 1
         cancel_ticket = int(cancel_ticket)
 
         seat = getInfoFromMySQL.getInfo('user_info', 'user_name', user_name, 0, 'show')
@@ -27,8 +27,8 @@ def cancel_ticket(user_name):
 
         # 航班信息展示,输入航班信息就能确定位置
         print("input flight_ID ")
-        # flight_ID = input()
-        flight_ID = 'A1'
+        flight_ID = input()
+        # flight_ID = 'A1'
         sql_select_flight = "select * from airplane where flight_ID='%s'" % flight_ID
         cursor1.execute(sql_select_flight)
         rs = cursor1.fetchall()

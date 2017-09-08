@@ -15,30 +15,35 @@ def main():
     #??pydev debugger: process 8328 is connecting
 
     #选择界面循环
+
     choice=1
     while choice!=0:
         print("function:3.view table airplane 4.order  6.book_ticket 7.cancel_ticket")
-        # _input=input()
-        _input=4
+        _input=input()
+
+        _input=int(_input)
+        # _input = 4
         if(_input==3):
-            getInfoFromMySQL.getInfo('airplane','flight_ID','NULL',0,'all airplane')
+            getInfoFromMySQL.getInfo('airplane','flight_ID','',0,'all airplane')
         if(_input==4):
-            getInfoFromMySQL.getInfo('airplane','flight_ID','NULL',0,'order des airplane')
+            getInfoFromMySQL.getInfo('airplane','flight_ID','',0,'order des airplane')
         if(_input==5):
             break # find()
         if(_input==6):
-            book_ticket.book_ticket(user_name)
+            try:
+                book_ticket.book_ticket(user_name)
+            except Exception as e:
+                print(e)
         if(_input==7):
             cancel_ticket.cancel_ticket(user_name)
         #提示是否跳出选择界面循环
         print("want to exit,enter make choice ==0 else enter 1 to continue")
         choice = input()
         choice=int(choice)
-        if(choice==1):
-            continue
+        if(choice!=0):
+           continue
         else:
             break
-
 
 
 

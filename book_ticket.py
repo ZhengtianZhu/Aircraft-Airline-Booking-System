@@ -6,9 +6,9 @@ def book_ticket(user_name='Zheng'):  # 订阅特定航班，先展示特定航�
     judge=1
     try:
         # 航班信息展示
-        # print("book ticket?please input flight_ID ")
-        # flight_ID=input()
-        flight_ID='A1'
+        print("book ticket?please input flight_ID ")
+        flight_ID=input("输入想要航班名称")
+        # flight_ID='A1'
         print("具体某一航班信息展示，此为%s"%flight_ID)
         # flight_ID.lower()
         try:
@@ -36,7 +36,7 @@ def book_ticket(user_name='Zheng'):  # 订阅特定航班，先展示特定航�
         book_=1
         book_=int(book_)
         if(book_==1):
-            # book_=input()
+            book_=input()
 
             seat = getInfoFromMySQL.getInfo('user_info', 'user_name', user_name, 0, 'show')
 
