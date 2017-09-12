@@ -1,0 +1,4 @@
+﻿member,leftover,flight_ID,start position,destination,leaving time,arriving time
+150,150,A1,Nanjing,Hangzhou,8:00,11:00
+150,150,B5,Shanghai,Beijing,7:00,14:30
+150,150,C3,Hong Kong,Taiwan,10:00,12:00
