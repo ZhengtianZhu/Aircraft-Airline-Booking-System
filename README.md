@@ -1,6 +1,9 @@
 # airplane_book_ticket_system
 第7组程序设计课python
 
+It is my first year of undergraduate study when I write the whole project from scratch.
+
+
 target:
   飞机订票系统是方便乘客网上订票的必备系统，主要负责对定飞机票的出售和退订改签进行管理。本课题要求该系统实现一个简单的、实用的飞机订票程序。主要功能包括飞机的具体信息的录入、查询等。所有数据都要利用文件系统保存以备查询。通过此课题，熟练掌握文件、数组、指针的各种操作，以及一些基本算法思想的应用。
 功能：浏览航班信息，录入航班信息，查询已有航班信息，航班信息排列，订票与退票
