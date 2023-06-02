@@ -14,8 +14,7 @@ target:
 5)对航班信息数据进行排序：把对应的航班信息放入指定的文件里，再用文件指针调出航班信息。
 6)进行订票与退票操作：选择订票和退票对应的数字编码，进去后输入所对应的机票编号，按下enter便以数字的形式形象得显示出作为的信息以供乘客选定。
 
-
-actually, .csv means some data, which can be put into the Mysql for use. Besides, some other files means the logic for the use of completing the task.
+.csv file contains data, which can be put into MySQL for use. Besides, some other files mean the logic for the use of completing the task.
 
 
 任务排期：
